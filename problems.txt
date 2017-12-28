@@ -1,0 +1,76 @@
+Solve 3 sum
+Max difference in array such that larger element is after smaller
+Max contiguous sum subarray.
+Max sum subarray
+Word search Graph problem , wordament type
+Word ladder
+Interval scheduling problem
+Solve 2 sum problem
+Word break 1
+Word break 2
+Solve the sudoku puzzle
+Design an LRU cache
+Design a URL shortner
+Design Random ID generator
+Design Key value store
+Design a photo sharing app
+Find LCS in a tree, also try using recursive approach
+Find majority element in a given array (eclasses array)
+Print all pairs in an array whose sum is X
+Find max difference in an array such that largers number appears after smaller
+Find number occuring odd number of times in an array
+Given an array, find two numbers whose sum is closest to zero.
+Find equilibrium index in the array
+Find a sub array with given sum
+Find largest sub array with equal number of 0s and 1s
+Find the number of possible triangles
+Find kth node from end of linked list
+Given a linked list, check if given linked list has loop
+Find starting node of cycle if linked list has loop
+Check whether given linked list is palindrome or not
+Merge two sorted linked list
+Merge k sorted linked list
+Check whether given array contains dupes in k-distance or not (hashing eclasses)
+Check wheter two sets are disjoint or not
+Group all occurence of elements order by their occurence
+Find four elements such that i+j = k+l (hashing)
+Design a stack such that getmin is O(1)
+Find closest greater element which is present on the right side of element
+implement stack with push pop find mid element, delete mid element in O1
+Merge overlapping intervals
+Check wheter parens are balanced or not
+Stock span problem
+Find max element in maxheap
+Delete arbitrary element from minheap
+Find median in stream of numbers
+Given k sorted list, find min range to which atleast one number belong from every list
+Print all numbers in the form a3+b3 (heaps eclasses)
+Convert BST to maxheap
+Find Size of binary tree
+check whether two trees are identical or not
+Mirror tree
+Level order traversal
+Find LCA in BST
+Convert a given binary tree into doubly ll
+Find diameter of given binary tree
+Get level of given key in binary tree
+Print nodes k distance apart from root
+Vertical sum of given binary tree
+Print bottom view of binary tree
+print left view of binary tree
+Check whether given binary tree is subtree of another binary tree
+Check whether given two nodes are cousins in binary tree
+Form a balanced binary searched tree froma a sorted array
+Remove all paths of length k from root in binary tree
+Convert given BST into balanced binary tree
+First non repeating character from a stream of character
+Find smallest window in a string containing all characters from another string
+Find max occuring character in a string
+Calculate power function
+Search element in sorted rotated array
+Find majority element (DandC eclasses)
+Rats in a maze eclasses 
+Knights problem leetcode backtracking
+Find subset of a given array
+Find subset in increasing order
+Find combination of a given array.
