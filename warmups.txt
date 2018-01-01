@@ -1,25 +1,25 @@
-Generate permutation of size n
-Generate power sets.
-Generate combination of size n,k
+Q: Generate permutation of size n
+Q: Generate power sets.
+Q: Generate combination of size n,k
 --Write Build to build segment trees
 --Write update of a segment trees
 --Write a RMQ for segment trees
 --Dry run a build operation of segment trees
 --Dry run an update operation of segment trees
 --Dry run a query operation of segment tree
-Write a recursive approach to solve Binary search
-Write an iterative version to solve Binary search
-Modify a Binary search to return element just less than key
-Modify a Binary search to return element just greater than key
-Generate all substrings of a string
+Q: Write a recursive approach to solve Binary search
+Q: Write an iterative version to solve Binary search
+Q: Modify a Binary search to return element just less than key
+Q: Modify a Binary search to return element just greater than key
+Q: Generate all substrings of a string
 --Recursive implementation of question 38 in stanford problems
-http://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
-http://www.geeksforgeeks.org/given-a-sorted-and-rotated-array-find-if-there-is-a-pair-with-a-given-sum/
-Toggle kth bit of a number
-Clear kth bit of a number
-Check whether kth bit of number is set and set kth bit of a number.
-Generate Square root of an integer (return an integer value): do both recursive and iterative
-Generate Square root of a real number(return real value): do both recursive and iterative
-Identify if a given Binary search tree is valid or not
-Implement a merge sort algorithm
-Write a program to count number of inversions in an array
+Q: http://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
+Q: http://www.geeksforgeeks.org/given-a-sorted-and-rotated-array-find-if-there-is-a-pair-with-a-given-sum/
+Q: Toggle kth bit of a number
+Q: Clear kth bit of a number
+Q: Check whether kth bit of number is set and set kth bit of a number.
+Q: Generate Square root of an integer (return an integer value): do both recursive and iterative
+Q: Generate Square root of a real number(return real value): do both recursive and iterative
+Q: Identify if a given Binary search tree is valid or not
+Q: Implement a merge sort algorithm
+Q: Write a program to count number of inversions in an array
