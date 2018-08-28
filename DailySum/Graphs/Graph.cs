@@ -11,6 +11,9 @@ namespace Graphs
         private T data;
         private int index;
 
+        public bool Visited;
+        public Vertex<T> Parent;
+
         public T GetData()
         {
             return this.data;
@@ -28,30 +31,38 @@ namespace Graphs
         }
     }
 
-    class Edge
+    class Edge<T>
     {
         public double Weight;
         public double Index;
+        public Vertex<T> From;
+        public Vertex<T> To;
 
-        public Edge(double Weight, int Index)
+        public Edge(double Weight, int Index, Vertex<T> from, Vertex<T> to)
         {
             this.Weight = Weight;
             this.Index = Index;
+            this.From = from;
+            this.To = to;
         }
     }
     public class Graph<T>
     {
-        private Dictionary<int, List<Edge>> adjacencyList;
+        private Dictionary<int, List<Edge<T>>> adjacencyList;
+        public List<Vertex<T>> Vertices;
 
         public Graph()
         {
-            this.adjacencyList = new Dictionary<int, List<Edge>>();
+            this.adjacencyList = new Dictionary<int, List<Edge<T>>>();
+            this.Vertices = new List<Vertex<T>>();
         }
 
         public void CreateDirectedEdge(Vertex<T> from, Vertex<T> to, double weight = 1.0)
         {
             int index = from.GetIndex();
-            Edge edge = new Edge(weight, to.GetIndex());
+            Edge<T> edge = new Edge<T>(weight, to.GetIndex(), from, to);
+            this.Vertices.Add(from);
+            this.Vertices.Add(to);
 
             if (this.adjacencyList.ContainsKey(index))
             {
@@ -59,7 +70,7 @@ namespace Graphs
             }
             else
             {
-                var edgeList = new List<Edge>();
+                var edgeList = new List<Edge<T>>();
                 edgeList.Add(edge);
                 this.adjacencyList.Add(index, edgeList );
             }
@@ -67,10 +78,13 @@ namespace Graphs
 
         public void CreateUnDirectedEdge(Vertex<T> from, Vertex<T> to, double weight = 1.0)
         {
+            this.Vertices.Add(from);
+            this.Vertices.Add(to);
+
             int index = from.GetIndex();
             int index2 = to.GetIndex();
-            Edge edge1 = new Edge(weight, index2);
-            Edge edge2 = new Edge(weight, index);
+            Edge<T> edge1 = new Edge<T>(weight, index2, from, to);
+            Edge<T> edge2 = new Edge<T>(weight, index, to, from);
 
 
             if (this.adjacencyList.ContainsKey(index))
@@ -79,7 +93,7 @@ namespace Graphs
             }
             else
             {
-                var edgeList = new List<Edge>();
+                var edgeList = new List<Edge<T>>();
                 edgeList.Add(edge1);
                 this.adjacencyList.Add(index, edgeList);
             }
@@ -90,7 +104,7 @@ namespace Graphs
             }
             else
             {
-                var edgeList = new List<Edge>();
+                var edgeList = new List<Edge<T>>();
                 edgeList.Add(edge2);
                 this.adjacencyList.Add(index2, edgeList);
             }
@@ -118,10 +132,43 @@ namespace Graphs
             return sb.ToString();
         }
 
+        public void ResetVertices()
+        {
+            foreach(var k in this.adjacencyList.Keys)
+            {
+                foreach(var v in this.adjacencyList[k])
+                {
+                    
+                }
+            }
+        }
+
 
 
         // create directed edge
         // create undirected edge
+    }
+
+    public class Search<T>
+    {
+        public static List<Vertex<T>> BFS(Graph<T> graph, Vertex<T> targetVertex, Vertex<T> rootVertex)
+        {
+            var q = new Queue<Vertex<T>>();
+
+            foreach( var v in graph.Vertices)
+            {
+                v.Visited = false;
+                v.Parent = null;
+            }
+
+            if (rootVertex.GetData().Equals(targetVertex.GetData()))
+            {
+                return new List<Vertex<T>> { rootVertex };
+            }
+
+            return null;
+
+        }
     }
 
 
