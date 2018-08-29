@@ -132,18 +132,19 @@ namespace Graphs
             return sb.ToString();
         }
 
-        public void ResetVertices()
+        public List<Vertex<T>> GetNeighbours(Vertex<T> vertex)
         {
-            foreach(var k in this.adjacencyList.Keys)
+            var neighbours = new List<Vertex<T>>();
+
+            if (this.adjacencyList.ContainsKey(vertex.GetIndex()))
             {
-                foreach(var v in this.adjacencyList[k])
+                foreach( var e in this.adjacencyList[vertex.GetIndex()])
                 {
-                    
+                    neighbours.Add(e.To);
                 }
             }
+            return neighbours;
         }
-
-
 
         // create directed edge
         // create undirected edge
@@ -153,21 +154,61 @@ namespace Graphs
     {
         public static List<Vertex<T>> BFS(Graph<T> graph, Vertex<T> targetVertex, Vertex<T> rootVertex)
         {
-            var q = new Queue<Vertex<T>>();
+            if (targetVertex == null || rootVertex == null)
+                return null;
 
-            foreach( var v in graph.Vertices)
+            if (rootVertex.GetData().Equals(targetVertex.GetData()))
+            {
+                return Path(rootVertex);
+            }
+
+            foreach ( var v in graph.Vertices)
             {
                 v.Visited = false;
                 v.Parent = null;
             }
 
-            if (rootVertex.GetData().Equals(targetVertex.GetData()))
+            var q = new Queue<Vertex<T>>();
+            q.Enqueue(rootVertex);
+
+            while (q.Count > 0)
             {
-                return new List<Vertex<T>> { rootVertex };
+                var currentVertex = q.Dequeue();
+
+                foreach (var v in graph.GetNeighbours(currentVertex))
+                {
+                    if (!v.Visited)
+                    {
+                        v.Parent = currentVertex;
+                        v.Visited = true;
+
+                        if (v.GetData().Equals(targetVertex.GetData()))
+                        {
+                            return Path(v);
+                        }
+                        q.Enqueue(v);
+                    }
+                }
             }
 
             return null;
+        }
 
+        public static List<Vertex<T>> Path(Vertex<T> targetVertex)
+        {
+            var path = new List<Vertex<T>>();
+            if (targetVertex == null)
+                return path;
+
+            var parent = targetVertex.Parent;
+            path.Add(targetVertex);
+
+            while(parent != null)
+            {
+                path.Add(parent);
+                parent = parent.Parent;
+            }
+            return path;
         }
     }
 
@@ -193,6 +234,12 @@ namespace Graphs
             //G.CreateDirectedEdge(v3, v4);
 
             Console.WriteLine(G.ToString());
+
+            var path = Search<int>.BFS(G, v1, v4);
+            foreach(var p in path)
+            {
+                Console.WriteLine("--> :" + p.GetData());
+            }
         }
     }
 }
