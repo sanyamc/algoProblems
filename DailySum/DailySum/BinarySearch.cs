@@ -15,7 +15,7 @@ namespace DailySum
 
             // assumptions
             // 1. Array is sorted
-            int[] input = { 1, 3, 10, 30, 300, 900 };
+            int[] input = { 1, 3, 9, 9, 9, 10, 30, 300, 900 };
             Console.WriteLine(JustGreater(input, 9)); // expects 10
             Console.WriteLine(JustGreater(input, -1)); // expects 1
             Console.WriteLine(JustGreater(input, 950)); // expects null
@@ -40,22 +40,22 @@ namespace DailySum
             if (key >= input[end])
                 return null;
 
-            while (start < end)
+            while (start <= end)
             {
                 int mid = (start + (end - start) / 2);
-                if (key == input[mid])
-                {
-                    if (mid < end)
-                        return input[mid + 1];
-                    return null;
+                //if (key == input[mid])
+                //{
+                //    if (mid < end)
+                //        return input[mid + 1];
+                //    return null;
 
-                }
+                //}
                 if (key < input[mid])
                 {
                     end = mid -1;
                     just = input[mid];
                 }
-                if (key > input[mid])
+                if (key >= input[mid])
                 {
                     start = mid +1;
                 }

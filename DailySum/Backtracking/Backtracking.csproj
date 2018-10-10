@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F86C6FDC-4952-4E0D-A82C-28C96FDBE4C5}</ProjectGuid>
+    <ProjectGuid>{BEDDAB8A-76E5-468A-A8E2-B90B40BF5E97}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DailySum</RootNamespace>
-    <AssemblyName>DailySum</AssemblyName>
+    <RootNamespace>Backtracking</RootNamespace>
+    <AssemblyName>Backtracking</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearch.cs" />
+    <Compile Include="ValidParens.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
