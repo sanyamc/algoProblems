@@ -23,3 +23,4 @@ Q: Generate Square root of a real number(return real value): do both recursive a
 Q: Identify if a given Binary search tree is valid or not
 Q: Implement a merge sort algorithm
 Q: Write a program to count number of inversions in an array
+Q: Find last occurence of a number in a sorted array.
