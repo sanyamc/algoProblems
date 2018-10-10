@@ -1,5 +1,5 @@
 Q: Solve 3 sum
-Q: Max difference in array such that larger element is after smaller
+Q: Given an array of start and end times; find total number of meeting rooms/classroom/platforms required
 Q: Max contiguous sum subarray.
 Q: Max sum subarray
 Q: Word search Graph problem , wordament type
