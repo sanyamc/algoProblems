@@ -9,7 +9,7 @@ Q: Generate combination of size n,k
 --Dry run a query operation of segment tree
 Q: Write a recursive approach to solve Binary search
 Q: Write an iterative version to solve Binary search
-Q: Modify a Binary search to return element just less than key
+Q: Modify a Binary search to return last occurence of the key
 Q: Modify a Binary search to return element just greater than key
 Q: Generate all substrings of a string
 --Recursive implementation of question 38 in stanford problems
@@ -21,6 +21,6 @@ Q: Check whether kth bit of number is set and set kth bit of a number.
 Q: Generate Square root of an integer (return an integer value): do both recursive and iterative
 Q: Generate Square root of a real number(return real value): do both recursive and iterative
 Q: Identify if a given Binary search tree is valid or not
-Q: Implement a merge sort algorithm
+Q: Implement a merge sort algorithm and customize merge function to keep track of some other vaiables.
 Q: Write a program to count number of inversions in an array
-Q: Find last occurence of a number in a sorted array.
+Q: Reverse words in a string in csharp.
