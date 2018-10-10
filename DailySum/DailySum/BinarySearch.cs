@@ -9,19 +9,19 @@ namespace DailySum
     public class BinarySearch
     {
 
-        public static void Main()
-        {
-            // find an element just greater than key in BST
+        //public static void Main()
+        //{
+        //    // find an element just greater than key in BST
 
-            // assumptions
-            // 1. Array is sorted
-            int[] input = { 1, 3, 10, 30, 300, 900 };
-            Console.WriteLine(JustGreater(input, 9)); // expects 10
-            Console.WriteLine(JustGreater(input, -1)); // expects 1
-            Console.WriteLine(JustGreater(input, 950)); // expects null
+        //    // assumptions
+        //    // 1. Array is sorted
+        //    int[] input = { 1, 3, 10, 30, 300, 900 };
+        //    Console.WriteLine(JustGreater(input, 9)); // expects 10
+        //    Console.WriteLine(JustGreater(input, -1)); // expects 1
+        //    Console.WriteLine(JustGreater(input, 950)); // expects null
 
 
-        }
+        //}
 
         // Below is actual binay search but it is modified ONLY in returning Just value
         // Remaining is same as regular BS
