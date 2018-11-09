@@ -9,43 +9,43 @@ namespace DailySum
     public class BinarySearch
     {
 
-        public static void Main()
-        {
-            // find an element just greater than key in BST
+        //public static void Main()
+        //{
+        //    // find an element just greater than key in BST
 
 
-            /*
-             * Iterative Binary Search
-             */
+        //    /*
+        //     * Iterative Binary Search
+        //     */
 
-            // 
-            int[] input = { 1, 3, 10, 30, 30, 30, 30, 30, 300, 900, 900, 900 };
-            Console.WriteLine(IterativeBinarySearch(input, 10)); // expects true
-            Console.WriteLine(IterativeBinarySearch(input, -1)); // expects false
+        //    // 
+        //    int[] input = { 1, 3, 10, 30, 30, 30, 30, 30, 300, 900, 900, 900 };
+        //    Console.WriteLine(IterativeBinarySearch(input, 10)); // expects true
+        //    Console.WriteLine(IterativeBinarySearch(input, -1)); // expects false
 
-            /*
-             *  Recursive Binary Search
-             */
-            Console.WriteLine(RecursiveBinarySearch(input, 0, input.Length - 1, 10)); // expects true
-            Console.WriteLine(RecursiveBinarySearch(input, 0, input.Length - 1, -1)); // expects false
+        //    /*
+        //     *  Recursive Binary Search
+        //     */
+        //    Console.WriteLine(RecursiveBinarySearch(input, 0, input.Length - 1, 10)); // expects true
+        //    Console.WriteLine(RecursiveBinarySearch(input, 0, input.Length - 1, -1)); // expects false
 
-            /*
-             *  First occurence in binary search
-             * 
-             */
-            Console.WriteLine("first occurence at: " + FirstOccurenceOfTarget(input, 30));
+        //    /*
+        //     *  First occurence in binary search
+        //     * 
+        //     */
+        //    Console.WriteLine("first occurence at: " + FirstOccurenceOfTarget(input, 30));
 
-            Console.WriteLine("first occurence at: " + FirstOccurenceOfTarget(input, 900));
+        //    Console.WriteLine("first occurence at: " + FirstOccurenceOfTarget(input, 900));
 
-            Console.WriteLine(JustGreater(input, 950)); // expects null
-                                                        //    assumptions
-                                                        //1.Array is sorted
-                                                        // input = { 1, 3, 9, 9, 9, 10, 30, 300, 900 };
-            Console.WriteLine(JustGreater(input, 9)); // expects 10
-            Console.WriteLine(JustGreater(input, -1)); // expects 1
-            Console.WriteLine(JustGreater(input, 950)); // expects null
+        //    Console.WriteLine(JustGreater(input, 950)); // expects null
+        //                                                //    assumptions
+        //                                                //1.Array is sorted
+        //                                                // input = { 1, 3, 9, 9, 9, 10, 30, 300, 900 };
+        //    Console.WriteLine(JustGreater(input, 9)); // expects 10
+        //    Console.WriteLine(JustGreater(input, -1)); // expects 1
+        //    Console.WriteLine(JustGreater(input, 950)); // expects null
 
-        }
+        //}
 
         public static bool RecursiveBinarySearch(int[] SortedArray, int start, int end, int target)
         {

@@ -31,56 +31,56 @@ namespace Strings
             return min;
         }
 
-        public static string MinimumWindowSubstring(string str, string T)
-        {
+        //public static string MinimumWindowSubstring(string str, string T)
+        //{
 
-            int start = -1, end = 0;
-            //var set = new HashSet<char>();
-            var map = new Dictionary<char, int>();
-            string result = "";
-            //foreach (var c in T)
-            //{
-            //    set.Add(c);
-            //}
+        //    int start = -1, end = 0;
+        //    //var set = new HashSet<char>();
+        //    var map = new Dictionary<char, int>();
+        //    string result = "";
+        //    //foreach (var c in T)
+        //    //{
+        //    //    set.Add(c);
+        //    //}
 
-            while (end <= str.Length)
-            {
-                char current = str.ElementAt(end);
-                if (T.Contains(current))
-                {
-                    if (start == -1)
-                        start = end;
-                    if (map.ContainsKey(current))
-                        map[current] = end;
-                    else
-                        map.Add(current, end);
-                }
-                if (map.Count == T.Length)
-                    break;
-                end++;
-            }
+        //    while (end <= str.Length)
+        //    {
+        //        char current = str.ElementAt(end);
+        //        if (T.Contains(current))
+        //        {
+        //            if (start == -1)
+        //                start = end;
+        //            if (map.ContainsKey(current))
+        //                map[current] = end;
+        //            else
+        //                map.Add(current, end);
+        //        }
+        //        if (map.Count == T.Length)
+        //            break;
+        //        end++;
+        //    }
 
-            if (start == -1)
-                return "";
-            result = str.substring(start, end - start + 1);
+        //    if (start == -1)
+        //        return "";
+        //    result = str.substring(start, end - start + 1);
 
-            // minimize
-            while (end < str.Length)
-            {
-                if (str[end] == str[start])
-                {
-                    map[str[end]] = end;
-                    start = GetMinKey(map);
-                    string temp = str.Substring(start, end - start + 1);
-                    if result.length > temp.length
+        //    // minimize
+        //    while (end < str.Length)
+        //    {
+        //        if (str[end] == str[start])
+        //        {
+        //            map[str[end]] = end;
+        //            start = GetMinKey(map);
+        //            string temp = str.Substring(start, end - start + 1);
+        //            if result.length > temp.length
         
-                result = temp;
-                }
-                end++;
-            }
-            return result;
+        //        result = temp;
+        //        }
+        //        end++;
+        //    }
+        //    return result;
 
-        }
+        //}
 
 
 

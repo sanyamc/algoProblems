@@ -32,21 +32,21 @@ namespace Strings
             
         }
 
-        public static void Main()
-        {
-            //xlColumn.map = new Dictionary<int, char>();
-            //for(int i=1;i<27;i++)
-            //{
-            //    xlColumn.map.Add(i, ((char)(64+i)));
-            //}
-            Console.WriteLine(ExcelColumn(1, ""));
-            Console.WriteLine(ExcelColumn(26, ""));
-            Console.WriteLine(ExcelColumn(27, ""));
-            Console.WriteLine(ExcelColumn(28, ""));
-            Console.WriteLine(ExcelColumn(53, ""));
-            Console.WriteLine(ExcelColumn(701, ""));
+        //public static void Main()
+        //{
+        //    //xlColumn.map = new Dictionary<int, char>();
+        //    //for(int i=1;i<27;i++)
+        //    //{
+        //    //    xlColumn.map.Add(i, ((char)(64+i)));
+        //    //}
+        //    Console.WriteLine(ExcelColumn(1, ""));
+        //    Console.WriteLine(ExcelColumn(26, ""));
+        //    Console.WriteLine(ExcelColumn(27, ""));
+        //    Console.WriteLine(ExcelColumn(28, ""));
+        //    Console.WriteLine(ExcelColumn(53, ""));
+        //    Console.WriteLine(ExcelColumn(701, ""));
 
 
-        }
+        //}
     }
 }

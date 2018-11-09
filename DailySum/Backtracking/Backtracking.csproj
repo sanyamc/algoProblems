@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combinations.cs" />
     <Compile Include="Counting.cs" />
     <Compile Include="PatternMatch.cs" />
+    <Compile Include="Permute.cs" />
     <Compile Include="ValidParens.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
