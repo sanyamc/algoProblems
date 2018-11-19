@@ -1,5 +1,5 @@
 Q: Generate permutation of size n
-Q: Generate power sets.
+Q: Generate power sets i.e. generate all subsets of size n array.
 Q: Generate combination of size n,k
 --Write Build to build segment trees
 --Write update of a segment trees
@@ -22,5 +22,8 @@ Q: Generate Square root of an integer (return an integer value): do both recursi
 Q: Generate Square root of a real number(return real value): do both recursive and iterative
 Q: Identify if a given Binary search tree is valid or not
 Q: Implement a merge sort algorithm and customize merge function to keep track of some other vaiables.
-Q: Write a program to count number of inversions in an array
+--Q: Write a program to count number of inversions in an array
 Q: Reverse words in a string in csharp.
+Q: Implement a regex pattern matcher; such that it has support for .*. It should have .,* and .* support.
+Q: Generate palendromic decomposition of a string. In other words, break a string such that all its decompositions are palindromes.
+Q: Given an array with integers representing the height of a histogram. WAP which returns largest rectangle.

@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Combinations.cs" />
     <Compile Include="Counting.cs" />
+    <Compile Include="Expressions-firstAttempt.cs" />
+    <Compile Include="nQueens.cs" />
     <Compile Include="PatternMatch.cs" />
     <Compile Include="Permute.cs" />
     <Compile Include="ValidParens.cs" />

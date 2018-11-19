@@ -8,54 +8,103 @@ namespace Backtracking
 {
     public class Permute
     {
-
-        public static void Permutation(IList<int> nums, int k)
+        static void PermuteMain(string toPermute)
         {
-            IList<int> bitArray = new List<int>();
-            foreach (var i in nums)
-                bitArray.Add(0);
 
-            Helper(nums, 0);
+            var temp = toPermute.ToArray<char>();
+            PermuteHelper(temp, 0);
+
         }
 
 
-        public static void Swap(IList<int> nums, int index1, int index2)
+        static void Swap(char[] temp, int i, int j)
         {
-            int temp = nums[index1];
-            nums[index1] = nums[index2];
-            nums[index2] = temp;
+
+            char t = temp[i];
+            temp[i] = temp[j];
+            temp[j] = t;
         }
 
 
-
-        public static void Helper(IList<int> nums, int j)
+        static void PermuteHelper(char[] temp, int i)
         {
 
-            if (j==nums.Count-1)
+            if (i == temp.Length - 1)
             {
-                foreach (var v in nums)
-                    Console.Write(v + ",");
+
+                foreach (var c in temp)
+                    Console.Write(c);
                 Console.WriteLine();
 
                 return;
+
             }
 
-            for (int i=0; i< nums.Count; i++)
-            {
-                Swap(nums, i, j);
-                Helper(nums, j + 1);
-                Swap(nums, i, j);
+            for (int j = i; j < temp.Length; j++) { 
+            //{
+            //    if (temp[i]==temp[j] && i!=j)
+            //        continue;
+
+                Swap(temp, i, j);
+
+                PermuteHelper(temp, i + 1);
+                Swap(temp, i, j);
 
             }
 
 
         }
 
-
-        public static void Main()
+        public static bool shouldSwap(char[] temp, int i, int j)
         {
-            List<int> nums = new List<int> { 1, 3, 4 };//, 9, 2, 5 };
-            Permutation(nums, 2);
+
+            for (int k = 0; k <= i; k++)
+            {
+                if (temp[k] == temp[j] )
+                    return false;
+            }
+            return true;
+
         }
+
+        static void SwapInt(List<int> arr, int i, int j)
+        {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        public static void PermuteEvenOdd(List<int> arr, int i)
+        {
+            if (i == arr.Count -1)
+            {
+                foreach (var k in arr)
+                    Console.Write(k);
+                Console.WriteLine();
+            }
+
+            for(int j=i;j<arr.Count; j++)
+            {
+                if ((i%2==0 && arr[j]%2!=0) || (i%2!=0 && arr[j] % 2 == 0))
+                {
+                    SwapInt(arr, i, j);
+                    PermuteEvenOdd(arr, i + 1);
+                    SwapInt(arr, i, j);
+                }
+            }
+        }
+
+        //public static void Main()
+        //{
+        //    //{
+        //    //    string s = "abcc";
+        //    //    Permute.PermuteMain(s);
+
+        //    //    Permute.PermuteMain("aba");
+
+        //    var l = new List<int> { 1, 2, 3, 4 };
+        //    PermuteEvenOdd(l, 0);
+
+        //}
     }
 }
