@@ -38,23 +38,23 @@ namespace Backtracking
             return current;
         }
 
+
         static bool helper(string s, int s_index, string p, int p_index)
         {
-
-            if (s_index >= s.Length || p_index >= p.Length)
+            if (p_index >= p.Length)
             {
-                p_index = getNextIndex(p, p_index);
-                if (p_index >= p.Length)
-                    return s_index >= s.Length && true;
-                return false;
+                return s.Length == s_index;
             }
-
-            char curr = s[s_index];
-
 
             int next = p_index + 1;
             if (next < p.Length && p[next] == '*')
             {
+                if (s_index >= s.Length)
+                {
+                    return helper(s, s_index, p, p_index + 2);
+                }
+
+                char curr = s[s_index];
                 if (p[p_index] == '.' || curr == p[p_index])
                 {
                     return (helper(s, s_index + 1, p, p_index + 2) ||
@@ -68,6 +68,8 @@ namespace Backtracking
                     return helper(s, s_index, p, p_index + 2);
                 }
             }
+            else if (s_index >= s.Length)
+                return false;
             else if (p[p_index] == '.')
             {
                 return helper(s, s_index + 1, p, p_index + 1);
@@ -76,13 +78,32 @@ namespace Backtracking
             {
                 return s[s_index] == p[p_index] && helper(s, s_index + 1, p, p_index + 1);
             }
+        }
+
+        public static void Main()
+        {
+            //{
+            //    string s = "abcc";
+            //    Permute.PermuteMain(s);
+
+            //    Permute.PermuteMain("aba");
+            var s = new Solution();
+            Console.WriteLine(s.IsMatch("cat", "c.*t"));
+
+            Console.WriteLine(s.IsMatch("cat", ".*cat"));
+
+            Console.WriteLine(s.IsMatch("cat", "caat"));
+
+            Console.WriteLine(s.IsMatch("caaaaaat", ".*"));
+
+            Console.WriteLine(s.IsMatch("cat", ".*.*.*.*"));
 
 
         }
     }
 
 
-    
+
 
 
 

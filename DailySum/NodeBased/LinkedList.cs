@@ -10,7 +10,7 @@ namespace NodeBased
     {
         public int data;
         public Node next;
-        public Node(int data, Node next)
+        public Node(int data, Node next =null)
         {
             this.data = data;
             this.next = next;
@@ -86,24 +86,61 @@ namespace NodeBased
             return result;
         }
 
+        public static Node MergeSorted(Node first, Node second)
+        {
+
+
+            if (first == null && second == null)
+            {
+                return null;
+        
+    }
+
+            if (first != null && second != null)
+            {
+                if (first.data < second.data)
+                {
+                    first.next = MergeSorted(first.next, second);
+                    return first;
+                }
+                else
+                {
+                    second.next = MergeSorted(first, second.next);
+                    return second;
+                }
+            }
+            else
+            {
+
+                if (first == null)
+                    return second;
+                return first;
+
+            }
+
+        }
+
         static void Main(string[] args)
         {
-            var n = new Node(2, null);
-            var b = new Node(1, n);
-            var c = new Node(0, b);
-            var d = new Node(9, c);
+            var n = new Node(9, null);
+            var b = new Node(2, n);
+            var c = new Node(1, b);
+            var d = new Node(0, c);
 
-            var e =new Node(3, null);
+            var e =new Node(7, null);
             var f = new Node(4, e);
-            var g = new Node(7, f);
+            var g = new Node(3, f);
 
-            LinkedList.printNodes(d);
+            var zipped = LinkedList.MergeSorted(d, g);
+            LinkedList.printNodes(zipped);
+
+           // LinkedList.printNodes(d);
           //  var start = LinkedList.reverseNode(d);
             Console.WriteLine();
-            LinkedList.printNodes(g);
-            var result = LinkedList.SumTwo(g, d);
-            Console.WriteLine();
-            LinkedList.printNodes(result);
+           // LinkedList.printNodes(g);
+        //    var result = LinkedList.SumTwo(g, d);
+         //   Console.WriteLine();
+         //   LinkedList.printNodes(result);
         }
     }
 }

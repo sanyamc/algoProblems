@@ -11,6 +11,7 @@ Q: Write a recursive approach to solve Binary search
 Q: Write an iterative version to solve Binary search
 Q: Modify a Binary search to return last occurence of the key
 Q: Modify a Binary search to return element just greater than key
+Q: Given a sorted array, find the range of given key.
 Q: Generate all substrings of a string
 --Recursive implementation of question 38 in stanford problems
 Q: http://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
@@ -27,3 +28,8 @@ Q: Reverse words in a string in csharp.
 Q: Implement a regex pattern matcher; such that it has support for .*. It should have .,* and .* support.
 Q: Generate palendromic decomposition of a string. In other words, break a string such that all its decompositions are palindromes.
 Q: Given an array with integers representing the height of a histogram. WAP which returns largest rectangle.
+Q: Given a binary search tree; wap to delete a node, do it for a node with one or no children. Do it for node with 2 children.
+Q: find the max depth in an n-array tree. which one i picked? now pick going the other way i.e. if i picked top down currentCount then in next return from child.
+Q: Write an iterator for in-order, pre-order and post-order traversal.
+Q: Find the count of unival subtrees in a tree.
+Q: Implement LRU Cache

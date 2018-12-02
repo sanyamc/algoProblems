@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace DailySum
 {
+    public class Result
+    {
+        public int min;
+        public int max;
+        public Result(int m, int max)
+        {
+            this.min = m;
+            this.max = max;
+        }
+    }
     public class BinarySearch
     {
 
@@ -153,6 +163,87 @@ namespace DailySum
             if (index != -1 && index < SortedArray.Length)
                 return index + 1;
             return -1;
+        }
+
+        public static double RealSquareRoot(double target)
+        {
+            double mid = 0;
+
+            double start = 1, end = target;
+
+            while(start<=end)
+            {
+                mid = start + (end - start) / 2;
+                double sq = mid * mid;
+                Console.WriteLine("Mid is: " + mid);
+                if (sq == target)
+                    return mid;
+                if (sq < target)
+                    start = mid;
+                else
+                    end = mid;
+            }
+
+
+            return mid;
+        }
+
+        public static Result Range(List<int> l, int start, int end, int key)
+        {
+            if (start > end)
+                return new Result(-1, -1);
+            if (start == end && l[start] == key)
+                return new Result(start, end);
+
+            int mid = start + (end - start) / 2;
+            if (l[mid] == key)
+            {
+                
+                var left = Range(l, start, mid - 1, key);
+                var right = Range(l, mid + 1, end, key);
+                int small = mid, large = mid;
+                if (left.min != -1)
+                    small = left.min;
+                if (right.min != -1)
+                    large = right.max;
+                return new Result(small, large);
+            }
+            else if (l[mid] <key)
+            {
+                return Range(l, mid + 1, end, key);
+            }
+            else
+            {
+                return Range(l, start, mid - 1, key);
+            }
+        }
+
+
+        public static void Main()
+        {
+            //int[][] arr = new int[4][3];
+
+            //int[] a1 = { 10, 4 };
+            //int[] a2 = { 8, 13, 0, 0 };
+
+            //string a = "test";
+            //char[] test = a.ToArray<char>();
+            //test[0] = 'f';
+            //string b = new string(test);
+
+            //Console.WriteLine("Square root is: " + BinarySearch.RealSquareRoot(4.25));
+
+            var l = new List<int> { 1, 2, 2, 2, 2, 2, 3, 4, 5, 5, 5, 5 };
+
+            var val = BinarySearch.Range(l, 0, l.Count - 1, 5);
+            Console.WriteLine("Range: " + val.min+ " : " + val.max);
+
+
+
+            //merger_first_into_second(a1, a2);
+
+
+            // solve(nuts, bolts);
         }
     }
 

@@ -1,7 +1,0 @@
-E:\Repos\algoProblems\DailySum\NodeBased\bin\Debug\NodeBased.exe.config
-E:\Repos\algoProblems\DailySum\NodeBased\bin\Debug\NodeBased.exe
-E:\Repos\algoProblems\DailySum\NodeBased\bin\Debug\NodeBased.pdb
-E:\Repos\algoProblems\DailySum\NodeBased\obj\Debug\NodeBased.csprojAssemblyReference.cache
-E:\Repos\algoProblems\DailySum\NodeBased\obj\Debug\NodeBased.csproj.CoreCompileInputs.cache
-E:\Repos\algoProblems\DailySum\NodeBased\obj\Debug\NodeBased.exe
-E:\Repos\algoProblems\DailySum\NodeBased\obj\Debug\NodeBased.pdb

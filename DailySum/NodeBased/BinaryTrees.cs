@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NodeBased
 {
-    class TreeNode
+    public class TreeNode
     {
         public int value;
         public TreeNode left;

@@ -64,25 +64,25 @@ namespace DailySum
             return arr2;
         }
 
-        public static void Main()
-        {
-            //int[][] arr = new int[4][3];
+        //public static void Main()
+        //{
+        //    //int[][] arr = new int[4][3];
 
-            int[] a1 = { 10, 4};
-            int[] a2 = { 8, 13, 0, 0};
+        //    int[] a1 = { 10, 4};
+        //    int[] a2 = { 8, 13, 0, 0};
 
-            string a = "test";
-            char[] test = a.ToArray<char>();
-            test[0] = 'f';
-            string b = new string(test);
-
-
-
-            //merger_first_into_second(a1, a2);
+        //    string a = "test";
+        //    char[] test = a.ToArray<char>();
+        //    test[0] = 'f';
+        //    string b = new string(test);
 
 
-            // solve(nuts, bolts);
-        }
+
+        //    //merger_first_into_second(a1, a2);
+
+
+        //    // solve(nuts, bolts);
+        //}
 
     }
 }

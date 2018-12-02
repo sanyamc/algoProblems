@@ -86,31 +86,31 @@ namespace Backtracking
 
         }
 
-        public static void Main()
-        {
-            //var s = new List<string>();
-            //s.Add("2");
-            //var r = new List<string>();
+        //public static void Main()
+        //{
+        //    //var s = new List<string>();
+        //    //s.Add("2");
+        //    //var r = new List<string>();
 
-            //helper("222", 24, 1, s, r);
-            //var temp = string.Join("", s.ToArray());
-            //var t = temp.Replace("\"\"", "");
+        //    //helper("222", 24, 1, s, r);
+        //    //var temp = string.Join("", s.ToArray());
+        //    //var t = temp.Replace("\"\"", "");
 
-            nQueens.find_all_arrangements(4);
-
-
+        //    nQueens.find_all_arrangements(4);
 
 
-            //List<int> b = new List<int>(a.Skip(0).Take(5));
 
-            //Console.WriteLine("abc".ToList<string>());
-            //var a = new List<string>()
-            //{
-            //    "2","*","5","\"\"","3","*","2","+","1"
-            //};
-            //var r = Expressions.ConvertInfixToPostFix(a);
-            //Expressions.EvaluatePostFix(r);
-        }
+
+        //    //List<int> b = new List<int>(a.Skip(0).Take(5));
+
+        //    //Console.WriteLine("abc".ToList<string>());
+        //    //var a = new List<string>()
+        //    //{
+        //    //    "2","*","5","\"\"","3","*","2","+","1"
+        //    //};
+        //    //var r = Expressions.ConvertInfixToPostFix(a);
+        //    //Expressions.EvaluatePostFix(r);
+        //}
 
     }
 }

@@ -1,50 +1,16 @@
 Q: Solve 3 sum
-Q: Given an array of start and end times; find total number of meeting rooms/classroom/platforms required
-Q: Max contiguous sum subarray.
-Q: Max sum subarray
-Q: Word search Graph problem , wordament type
-Q: Word ladder
-Q: Interval scheduling problem
-Q: Solve 2 sum problem
-Q: Word break 1
-Q: Word break 2
-Q: Solve the sudoku puzzle
+Q: Match Nuts and Bolts problem
+Q: Given a binary search tree. Identify if the tree is a bst or not
 Q: Design an LRU cache
-Q: Design a URL shortner
-Q: Design Random ID generator
-Q: Design Key value store
-Q: Design a photo sharing app
-Q: Find LCS in a tree, also try using recursive approach
-Q: Find majority element in a given array (eclasses array)
-Q: Print all pairs in an array whose sum is X
-Q: Find max difference in an array such that largers number appears after smaller
-Q: Find number occuring odd number of times in an array
-Q: Given an array, find two numbers whose sum is closest to zero.
-Q: Find equilibrium index in the array
-Q: Find a sub array with given sum
-Q: Find largest sub array with equal number of 0s and 1s
-Q: Find the number of possible triangles
-Q: Find kth node from end of linked list
-Q: Given a linked list, check if given linked list has loop
-Q: Find starting node of cycle if linked list has loop
-Q: Check whether given linked list is palindrome or not
-Q: Merge two sorted linked list
-Q: Merge k sorted linked list
-Q: Check whether given array contains dupes in k-distance or not (hashing eclasses)
-Q: Check wheter two sets are disjoint or not
-Q: Group all occurence of elements order by their occurence
-Q: Find four elements such that i+j = k+l (hashing)
-Q: Design a stack such that getmin is O(1)
-Q: Find closest greater element which is present on the right side of element. For e.g. if the array is <12,25,13> then return <25,null,null>. So closest in distance/index not value.
+Q: Find k-th smallest element in a BST
+Q: Find permutations of a given array. Try not using an additional array.
+Q: Given an array of start and end times; find total number of meeting rooms/classroom/platforms required
+Q: Given a dictionary of words and a regex pattern, find all the words that match the pattern.
+Q: 
+Q: Interval scheduling problem
+Q: Find LCA in a tree, also try using recursive approach
 Q: implement stack with push pop find mid element, delete mid element in O1
 Q: Merge overlapping intervals
-Q: Check wheter parens are balanced or not
-Q: Stock span problem
-Q: Find max element in maxheap
-Q: Delete arbitrary element from minheap
-Q: Find median in stream of numbers
-Q: Given k sorted list, find min range to which atleast one number belong from every list
-Q: Print all numbers in the form a3+b3 (heaps eclasses)
 Q: Convert BST to maxheap
 Q: Find Size of binary tree
 Q: check whether two trees are identical or not
@@ -53,24 +19,7 @@ Q: Level order traversal
 Q: Find LCA in BST
 Q: Convert a given binary tree into doubly ll
 Q: Find diameter of given binary tree
-Q: Get level of given key in binary tree
-Q: Print nodes k distance apart from root
-Q: Vertical sum of given binary tree
-Q: Print bottom view of binary tree
-Q: print left view of binary tree
-Q: Check whether given binary tree is subtree of another binary tree
-Q: Check whether given two nodes are cousins in binary tree
-Q: Form a balanced binary searched tree froma a sorted array
-Q: Remove all paths of length k from root in binary tree
-Q: Convert given BST into balanced binary tree
-Q: First non repeating character from a stream of character
-Q: Find smallest window in a string containing all characters from another string
-Q: Find max occuring character in a string
-Q: Calculate power function
-Q: Search element in sorted rotated array
-Q: Find majority element (DandC eclasses)
-Q: Rats in a maze eclasses 
-Q: Knights problem leetcode backtracking
 Q: Find subset of a given array
-Q: Find subset in increasing order
+Q: Find subset of a given array in increasing order
 Q: Find combination of a given array.
+Q: For a given single linked list. Reverse the list for given start and end index. https://leetcode.com/problems/reverse-linked-list-ii/submissions/

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryTrees.cs" />
+    <Compile Include="BST.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
