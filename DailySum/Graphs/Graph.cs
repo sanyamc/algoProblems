@@ -215,31 +215,31 @@ namespace Graphs
 
     public class TestRunner
     {
-        public static void Main()
-        {
-            var v1 = new Vertex<int>(1, 1);
-            var v2 = new Vertex<int>(2, 2);
-            var v3 = new Vertex<int>(3, 3);
-            var v4 = new Vertex<int>(4, 4);
+        //public static void Main()
+        //{
+        //    var v1 = new Vertex<int>(1, 1);
+        //    var v2 = new Vertex<int>(2, 2);
+        //    var v3 = new Vertex<int>(3, 3);
+        //    var v4 = new Vertex<int>(4, 4);
 
-            var G = new Graph<int>();
-            G.CreateUnDirectedEdge(v1, v2);
-            G.CreateUnDirectedEdge(v1, v3);
-            G.CreateUnDirectedEdge(v2, v4);
-            G.CreateUnDirectedEdge(v3, v4);
+        //    var G = new Graph<int>();
+        //    G.CreateUnDirectedEdge(v1, v2);
+        //    G.CreateUnDirectedEdge(v1, v3);
+        //    G.CreateUnDirectedEdge(v2, v4);
+        //    G.CreateUnDirectedEdge(v3, v4);
 
-            //G.CreateDirectedEdge(v1, v2);
-            //G.CreateDirectedEdge(v1, v3);
-            //G.CreateDirectedEdge(v2, v4);
-            //G.CreateDirectedEdge(v3, v4);
+        //    //G.CreateDirectedEdge(v1, v2);
+        //    //G.CreateDirectedEdge(v1, v3);
+        //    //G.CreateDirectedEdge(v2, v4);
+        //    //G.CreateDirectedEdge(v3, v4);
 
-            Console.WriteLine(G.ToString());
+        //    Console.WriteLine(G.ToString());
 
-            var path = Search<int>.BFS(G, v1, v4);
-            foreach(var p in path)
-            {
-                Console.WriteLine("--> :" + p.GetData());
-            }
-        }
+        //    var path = Search<int>.BFS(G, v1, v4);
+        //    foreach(var p in path)
+        //    {
+        //        Console.WriteLine("--> :" + p.GetData());
+        //    }
+        //}
     }
 }

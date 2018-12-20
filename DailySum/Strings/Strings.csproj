@@ -48,6 +48,8 @@
     <Compile Include="MinWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuffixTries.cs" />
+    <Compile Include="Tries.cs" />
     <Compile Include="xlColumn.cs" />
   </ItemGroup>
   <ItemGroup>

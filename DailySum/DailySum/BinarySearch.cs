@@ -219,32 +219,32 @@ namespace DailySum
         }
 
 
-        public static void Main()
-        {
-            //int[][] arr = new int[4][3];
+        //public static void Main()
+        //{
+        //    //int[][] arr = new int[4][3];
 
-            //int[] a1 = { 10, 4 };
-            //int[] a2 = { 8, 13, 0, 0 };
+        //    //int[] a1 = { 10, 4 };
+        //    //int[] a2 = { 8, 13, 0, 0 };
 
-            //string a = "test";
-            //char[] test = a.ToArray<char>();
-            //test[0] = 'f';
-            //string b = new string(test);
+        //    //string a = "test";
+        //    //char[] test = a.ToArray<char>();
+        //    //test[0] = 'f';
+        //    //string b = new string(test);
 
-            //Console.WriteLine("Square root is: " + BinarySearch.RealSquareRoot(4.25));
+        //    //Console.WriteLine("Square root is: " + BinarySearch.RealSquareRoot(4.25));
 
-            var l = new List<int> { 1, 2, 2, 2, 2, 2, 3, 4, 5, 5, 5, 5 };
+        //    var l = new List<int> { 1, 2, 2, 2, 2, 2, 3, 4, 5, 5, 5, 5 };
 
-            var val = BinarySearch.Range(l, 0, l.Count - 1, 5);
-            Console.WriteLine("Range: " + val.min+ " : " + val.max);
-
-
-
-            //merger_first_into_second(a1, a2);
+        //    var val = BinarySearch.Range(l, 0, l.Count - 1, 5);
+        //    Console.WriteLine("Range: " + val.min+ " : " + val.max);
 
 
-            // solve(nuts, bolts);
-        }
+
+        //    //merger_first_into_second(a1, a2);
+
+
+        //    // solve(nuts, bolts);
+        //}
     }
 
 

@@ -132,25 +132,60 @@ namespace LinkedList
             }
             Console.WriteLine();
         }
+
+        static ListNode RemoveNthNode(ListNode root, int currentIndex, int target)
+        {
+            if (root == null)
+                return root;
+
+            if (currentIndex == target)
+            {
+                var val = RemoveNthNode(root.next, 1, target);
+                var temp = root.next;
+
+                root.next = null;
+                return temp;
+            }
+            else
+            {
+                var val = RemoveNthNode(root.next, currentIndex + 1, target);
+                root.next = val;
+                return root;
+            }
+        }
         //}
-        //static void Main(string[] args)
-        //{
+        static void Main(string[] args)
+        {
 
-        //    var p = new Program();
-        //    p.InsertLL(1);
-        //    p.InsertLL(2);
-        //    p.InsertLL(3);
+            var root = new ListNode(1);
+            root.next = new ListNode(2);
+            root.next.next = new ListNode(3);
+            root.next.next.next = new ListNode(4);
+            root.next.next.next.next = new ListNode(5);
 
-        //    p.MoveToFront(1);
+            ListNode.PrintNode(root);
 
-        //    p.MoveToFront(3);
+            RemoveNthNode(root, 1, 1);
 
-        //    p.MoveToFront(3);
+            // do root = null
 
-        //    //p.DeleteTail();
-        //    //p.DeleteTail();
-        //    //p.DeleteTail();
-            
-        //}
+            ListNode.PrintNode(root);
+
+            //var p = new Program();
+            //p.InsertLL(1);
+            //p.InsertLL(2);
+            //p.InsertLL(3);
+
+            //p.MoveToFront(1);
+
+            //p.MoveToFront(3);
+
+            //p.MoveToFront(3);
+
+            //p.DeleteTail();
+            //p.DeleteTail();
+            //p.DeleteTail();
+
+        }
     }
 }

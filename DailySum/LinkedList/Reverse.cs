@@ -13,6 +13,18 @@ namespace LinkedList
         public int val;
         public ListNode next;
         public ListNode(int x) { val = x; }
+
+        public static void PrintNode(ListNode root)
+        {
+            var temp = root;
+
+            while(temp!=null)
+            {
+                Console.Write(temp.val + "-->");
+                temp = temp.next;
+            }
+            Console.WriteLine();
+        }
     }
 
     public class Solution
@@ -33,20 +45,20 @@ namespace LinkedList
 
             if (m == 1)
             {
-                Reverse(ref startNode, startNode, startNode, n, m);
+                Reverse(startNode, startNode, startNode, n, m);
                 return startNode;
 
             }
             else
             {
-                Reverse(ref startNode, startNode.next, startNode.next, n, m);
-                temp.next = startNode;
+                Reverse(startNode, startNode.next, startNode.next, n, m);
+               // temp.next = startNode; // was thinking that startNode will change as its ref BUT WONT
                 return head;
             }
         }
 
 
-        public static ListNode Reverse(ref ListNode head, ListNode tail, ListNode current, int target, int currIndex)
+        public static ListNode Reverse(ListNode head, ListNode tail, ListNode current, int target, int currIndex)
         {
 
 
@@ -55,31 +67,31 @@ namespace LinkedList
             {
 
                 tail.next = current.next;
-                head = current;
+                head.next = current;
                 return current;
             }
 
             else
             {
 
-                var t = Reverse(ref head, tail, current.next, target, currIndex + 1);
+                var t = Reverse(head, tail, current.next, target, currIndex + 1);
                 t.next = current;
                 return current;
             }
         }
 
-        public static void Main()
-        {
-            var head = new ListNode(1);
-            head.next = new ListNode(2);
-            head.next.next = new ListNode(3);
-            head.next.next.next = new ListNode(4);
-            head.next.next.next.next = new ListNode(5);
+        //public static void Main()
+        //{
+        //    var head = new ListNode(1);
+        //    head.next = new ListNode(2);
+        //    head.next.next = new ListNode(3);
+        //    head.next.next.next = new ListNode(4);
+        //    head.next.next.next.next = new ListNode(5);
 
-            var l = new Solution();
-            l.ReverseBetween(head, 2, 4);
+        //    var l = new Solution();
+        //    l.ReverseBetween(head, 2, 4);
 
             
-        }
+        //}
     }
 }

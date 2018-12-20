@@ -43,6 +43,8 @@ namespace DailySum
                 }
                 i = newIndex(arr, i, 1);
             }
+
+            "test".ToList<char>();
             return result.ToArray();
 
         }
@@ -74,6 +76,60 @@ namespace DailySum
                 }
                 return currentIndex;
             }
+        }
+
+
+        public static void PrintCombination(List<int> arr, List<int> output, int target, int curr)
+        {
+            if(output.Count == target)
+            {
+                foreach(var k in output)
+                {
+                    Console.Write(k + "-");
+                }
+                Console.WriteLine();
+                return;
+            }
+            if (curr == arr.Count)
+                return;
+
+            output.Add(arr[curr]);
+            PrintCombination(arr, output, target, curr + 1);
+            output.RemoveAt(output.Count - 1);
+            PrintCombination(arr, output, target, curr + 1);
+
+        }
+
+        public static void PrintPermutations(List<int> arr, int position)
+        {
+            if (position == arr.Count -1)
+            {
+                foreach(var k in arr)
+                {
+                    Console.Write(k + "-");
+                }
+                Console.WriteLine("");
+                return;
+            }
+
+            for(int i=position; i<arr.Count; i++)
+            {
+                var temp = arr[i];
+                arr[i] = arr[position];
+                arr[position] = temp;
+                PrintPermutations(arr, position + 1);
+
+                temp = arr[i];
+                arr[i] = arr[position];
+                arr[position] = temp;
+            }
+        }
+
+        public static void Main()
+        {
+            var a = new List<int> { 1,2,3,4,5,6};
+            //PrintPermutations(a, 0);
+            PrintCombination(a, new List<int>(), 4, 0);
         }
 
 

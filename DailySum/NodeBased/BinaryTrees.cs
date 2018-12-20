@@ -35,5 +35,32 @@ namespace NodeBased
             return left;
         }
 
+        static void Main(string[] args)
+        {
+
+
+
+
+            //var n = new Node(9, null);
+            //var b = new Node(2, n);
+            //var c = new Node(1, b);
+            //var d = new Node(0, c);
+
+            //var e = new Node(7, null);
+            //var f = new Node(4, e);
+            //var g = new Node(3, f);
+
+            //var zipped = LinkedList.MergeSorted(d, g);
+            //LinkedList.printNodes(zipped);
+
+            //// LinkedList.printNodes(d);
+            ////  var start = LinkedList.reverseNode(d);
+            //Console.WriteLine();
+            // LinkedList.printNodes(g);
+            //    var result = LinkedList.SumTwo(g, d);
+            //   Console.WriteLine();
+            //   LinkedList.printNodes(result);
+        }
+
     }
 }

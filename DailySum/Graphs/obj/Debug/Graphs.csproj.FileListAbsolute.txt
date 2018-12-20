@@ -5,3 +5,10 @@ E:\Repos\algoProblems\DailySum\Graphs\bin\Debug\Graphs.exe
 E:\Repos\algoProblems\DailySum\Graphs\bin\Debug\Graphs.pdb
 E:\Repos\algoProblems\DailySum\Graphs\obj\Debug\Graphs.exe
 E:\Repos\algoProblems\DailySum\Graphs\obj\Debug\Graphs.pdb
+C:\Repos\algoProblems\DailySum\Graphs\bin\Debug\Graphs.exe.config
+C:\Repos\algoProblems\DailySum\Graphs\bin\Debug\Graphs.exe
+C:\Repos\algoProblems\DailySum\Graphs\bin\Debug\Graphs.pdb
+C:\Repos\algoProblems\DailySum\Graphs\obj\Debug\Graphs.csprojResolveAssemblyReference.cache
+C:\Repos\algoProblems\DailySum\Graphs\obj\Debug\Graphs.csproj.CoreCompileInputs.cache
+C:\Repos\algoProblems\DailySum\Graphs\obj\Debug\Graphs.exe
+C:\Repos\algoProblems\DailySum\Graphs\obj\Debug\Graphs.pdb

@@ -51,10 +51,10 @@ namespace Strings
 
         }
 
-        public static void Main()
-        {
-            string[] arr = { "key1 abcd", "key4 zzzz", "key2 efef", "key1 hello" };
-            solve(arr);
-        }
+        //public static void Main()
+        //{
+        //    string[] arr = { "key1 abcd", "key4 zzzz", "key2 efef", "key1 hello" };
+        //    solve(arr);
+        //}
     }
 }
